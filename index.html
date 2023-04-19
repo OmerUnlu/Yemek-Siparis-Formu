@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pizza Sipariş Formu</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="header">
+            <h1>Pizza Sipariş Formu</h1>
+            <div class="img"><img src="pizza.jpg" alt="pizza Resmi"></div>
+        </div>
+
+        <form action="#" id="pizzaForm">
+            
+            <label for="listePizza" class="fonts">Pizza Boyutunu Seçiniz:</label>
+            <select id="listePizza" size="1">
+                <option value="20">Küçük Boy (20)</option>
+                <option value="30">Orta Boy (30)</option>
+                <option value="40">Büyük Boy (40)</option>
+                <option value="50">Süper Boy (50)</option>
+            </select>
+
+            <label for="listeEkMalzeme"  class="fonts">Sonradan Eklemek İstedikleriniz (+2):</label>
+            <span id="listeEkMalzeme">
+                <input type="checkbox" name="extra" value="Yeşil Zeytin" id="mal1"> <label for="mal1">Yeşil Zeytin</label> 
+                <input type="checkbox" name="extra" value="Siyah Zeytin" id="mal2"> <label for="mal2">Siyah Zeytin</label> 
+                <input type="checkbox" name="extra" value="Salam" id="mal3">        <label for="mal3">Salam</label>
+                <input type="checkbox" name="extra" value="Sosis" id="mal4">        <label for="mal4">Sosis</label>   
+
+                <input type="checkbox" name="extra" value="Sucuk" id="mal5">   <label for="mal5">Sucuk</label>
+                <input type="checkbox" name="extra" value="Mantar"id="mal6">   <label for="mal6">Mantar</label>
+                <input type="checkbox" name="extra" value="Mısır" id="mal7">   <label for="mal7">Mısır</label>
+                <input type="checkbox" name="extra" value="Acı Sos" id="mal8"> <label for="mal8">Acı Sos</label> 
+
+                <input type="checkbox" name="extra" value="Ranch Sos" id="mal9">    <label for="mal9">Ranch Sos</label>
+                <input type="checkbox" name="extra" value="Barbekü Sos" id="mal10"> <label for="mal10">Barbekü Sos</label>
+                <input type="checkbox" name="extra" value="Mayonez" id="mal11">     <label for="mal11">Mayonez</label>
+                <input type="checkbox" name="extra" value="Jambon" id="mal12">      <label for="mal12">Jambon</label>
+            </span>        
+            
+            
+            <label for="indirim"  class="fonts">İndirim Tipini Seçiniz:</label>
+            <span id="indirim">
+                <input type="radio" id="kodTrue" value="Var" name="indirim" onchange="aktif()">
+                <label for="kodTrue">İndirim Kodum Var</label>   
+                
+                <input type="radio" id="kodFalse" value="Yok" name="indirim" onchange="pasif()">
+                <label for="kodFalse">İndirim Kodum Yok</label> 
+            </span>
+
+            <label for="txtIndirimKodu"  class="fonts">Varsa İndirim Kodunu Giriniz:</label>
+            <input type="text" id="txtIndirimKodu" disabled>
+
+            <label for="guncelDurum" value="Güncel Durum"  class="fonts"> GÜNCEL DURUM:</label>
+            <input type="text" id="guncelDurum" disabled >
+            
+            <input type="button" value="Hesapla" id="btnHesapla" onclick="pizzaHesapla()">
+
+
+        </form>
+        
+        <h5 id="sonuc"></h5>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>

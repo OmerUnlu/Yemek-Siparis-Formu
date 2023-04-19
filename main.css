@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border: 2px solid black;
+    width: 80%;
+}
+.header{
+    color: red;
+    text-align: center;
+    padding: .6rem 0 1rem 0;
+    border: brown 1px solid; 
+    margin: 2px;
+}
+.header h1{
+    display: inline-block;
+}
+
+.header .img{
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: -7px;
+}
+
+.container #pizzaForm{
+    display: grid;
+    grid-template-columns: 400px auto;
+
+}
+#pizzaForm #listeEkMalzeme{
+    display: grid;
+    grid-template-columns: repeat(8,70px);
+    grid-template-rows: repeat(3,25px);
+    padding: 2px;
+    border: thin solid rgb(78, 72, 72);
+}
+#pizzaForm #listeEkMalzeme label{
+    margin-left: -15px;
+}
+
+#indirim{
+    margin: 8px;
+
+}
+#indirim>label{
+    margin-right: 15px;
+}
+input[type=text]{
+    height: 40px;
+}
+input[type = button]{
+    font-size: large;
+}
+#btnHesapla{
+    grid-column: 1/3;
+    padding: 10px;
+    font-size: x-large;
+}
+#pizzaForm #listePizza{
+    padding: 5px;
+    font-size: medium;
+    margin-bottom: 2px;
+}
+#sonuc{
+    text-align: center;
+    font-size: large;
+}
+.fonts{
+    font-size: large;
+}
